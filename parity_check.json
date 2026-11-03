@@ -1,0 +1,6 @@
+{
+  "tested_profiles": 30,
+  "max_absolute_probability_difference": 0.0,
+  "passed": true,
+  "comparison": "in-memory fitted M2 vs reloaded joblib M2"
+}

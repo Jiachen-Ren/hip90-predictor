@@ -1,0 +1,82 @@
+{
+  "algorithm": "ElasticNet",
+  "model": "M2",
+  "target": "P(independent ambulation at 90 days; FIM-L >= 6)",
+  "feature_order": [
+    "age",
+    "gender",
+    "BMI（kg/m²）",
+    "type",
+    "ASA",
+    "Preoperative_ambulation_ability",
+    "CCI",
+    "Surgical_method",
+    "7-day_average_daily_steps(steps/day)",
+    "7-day_average_daily_activity_time(minutes/day)",
+    "7-day_average_walking_speed(meters/second)",
+    "7-day_average_sleep_duration(hours/night)",
+    "Sleep_continuity_from_day_1_to_day_7"
+  ],
+  "clinical_features": [
+    "age",
+    "gender",
+    "BMI（kg/m²）",
+    "type",
+    "ASA",
+    "Preoperative_ambulation_ability",
+    "CCI",
+    "Surgical_method"
+  ],
+  "wearable_features": [
+    "7-day_average_daily_steps(steps/day)",
+    "7-day_average_daily_activity_time(minutes/day)",
+    "7-day_average_walking_speed(meters/second)",
+    "7-day_average_sleep_duration(hours/night)",
+    "Sleep_continuity_from_day_1_to_day_7"
+  ],
+  "codebook": {
+    "gender": {
+      "1": "Male",
+      "2": "Female"
+    },
+    "type": {
+      "1": "Femoral neck",
+      "2": "Intertrochanteric",
+      "3": "Subtrochanteric"
+    },
+    "ASA": {
+      "1": "I",
+      "2": "II",
+      "3": "III",
+      "4": "IV"
+    },
+    "Preoperative_ambulation_ability": {
+      "1": "Independent",
+      "2": "Walking aid",
+      "3": "Human assistance"
+    },
+    "Surgical_method": {
+      "1": "Internal fixation",
+      "2": "Arthroplasty"
+    }
+  },
+  "labels": {
+    "age": "Age (years)",
+    "gender": "Sex",
+    "BMI（kg/m²）": "BMI (kg/m²)",
+    "type": "Fracture type",
+    "ASA": "ASA grade",
+    "Preoperative_ambulation_ability": "Prefracture ambulation",
+    "CCI": "CCI",
+    "Surgical_method": "Surgical procedure",
+    "7-day_average_daily_steps(steps/day)": "Daily steps",
+    "7-day_average_daily_activity_time(minutes/day)": "Daily active time (min)",
+    "7-day_average_walking_speed(meters/second)": "Walking speed (m/s)",
+    "7-day_average_sleep_duration(hours/night)": "Sleep duration (h)",
+    "Sleep_continuity_from_day_1_to_day_7": "Sleep continuity (0–1)",
+    "walkalone": "Independent ambulation at 90 days"
+  },
+  "status": "research prototype; not clinically validated",
+  "training_data": "development cohort only",
+  "missing_data_handling": "saved fitted sklearn preprocessing pipeline"
+}
